@@ -1,0 +1,4 @@
+{
+    "viewOnGitHub": "//img[@alt='github logo']",
+    "auctionButton": "(//a[text()='Auctions'])[1]"
+}

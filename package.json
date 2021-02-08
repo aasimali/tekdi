@@ -1,0 +1,24 @@
+{
+  "name": "chapter7",
+  "version": "1.0.0",
+  "description": "This is the demo of chapter7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aasim Anwar",
+  "license": "MIT",
+  "devDependencies": {
+    "cucumber": "^1.3.2",
+    "protractor": "^5.4.3",
+    "protractor-cucumber-framework": "^6.2.0"
+  },
+  "dependencies": {
+    "cucumberjs-allure2-reporter": "^1.3.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "mail-listener2": "^0.3.1",
+    "nodemailer": "^6.4.4",
+    "protractor-html-reporter-2": "^1.0.4",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.1"
+  }
+}
