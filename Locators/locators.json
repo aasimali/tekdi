@@ -1,4 +1,10 @@
 {
-    "viewOnGitHub": "//img[@alt='github logo']",
-    "auctionButton": "(//a[text()='Auctions'])[1]"
+    "viewOnGitHub":{
+        "locatorType": "xpath",
+        "locator": "//img[@alt='github logo']"
+    },
+    "auctionButton":{
+        "locatorType": "xpath",
+        "locator": "(//a[text()='Auctions'])[1]"
+    }
 }

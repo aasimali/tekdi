@@ -4,7 +4,7 @@
   "description": "This is the demo of chapter7",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install && webdriver-manager update && protractor conf.js"
   },
   "author": "Aasim Anwar",
   "license": "MIT",

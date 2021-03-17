@@ -1,12 +1,11 @@
 var locator = require('./../Locators/locators.json');
 var test_data = require('./../TestData/test_data.json');
-const { browser } = require('protractor');
+var GenericMethod = require('./genericMethods');
+var deferred = protractor.promise.defer();
+var expected = protractor.ExpectedConditions;
+var Max_TimeOut = 30000;
 
 let pageObject = function () {
-
-    var deferred = protractor.promise.defer();
-    var expected = protractor.ExpectedConditions;
-    Max_TimeOut = 30000;
 
     this.OpenWebUrl = async function (url) {
         switch (url) {
@@ -29,19 +28,19 @@ let pageObject = function () {
     this.clickOnButton = async function (button) {
         switch (button) {
             case 'View on GitHub':
-                button = element(by.xpath("" + locator.viewOnGitHub + ""));
+                button = GenericMethod.SetLocator(locator.viewOnGitHub);
                 break;
 
             case 'Auction':
-                button = element(by.xpath("" + locator.auctionButton + ""));
+                button = GenericMethod.SetLocator(locator.auctionButton);
                 break;
 
             default:
                 console.log('No case match')
         }
         await browser.wait(expected.visibilityOf(button, Max_TimeOut));
+        await browser.actions().mouseMove(button).perform();
         await button.click();
-        await browser.sleep(3000); //just for testing, in realtime, we don't need it
         deferred.fulfill();
     }
 
